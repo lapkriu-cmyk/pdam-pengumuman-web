@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Info Pelanggan PDAM</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <div>
+        <strong id="pdamName">PDAM Tirta Daerah</strong>
+        <span>Info Pelanggan</span>
+      </div>
+      <a class="admin-link" href="/admin">Login Admin</a>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">Pengumuman resmi pelanggan</p>
+      <h1>Informasi layanan air, perbaikan, dan gangguan distribusi.</h1>
+      <p class="hero-text">Pantau informasi terbaru dari PDAM, termasuk perbaikan kebocoran, jadwal pemeliharaan, gangguan aliran, dan pemberitahuan penting lainnya.</p>
+      <div class="hero-actions">
+        <a class="primary-btn" href="#informasi">Lihat informasi</a>
+        <a class="secondary-btn" id="waButton" href="#" target="_blank" rel="noopener">Hubungi PDAM</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="notice-bar" id="importantBox" hidden></section>
+
+    <section class="filters" id="informasi">
+      <div>
+        <p class="eyebrow dark">Daftar informasi</p>
+        <h2>Info terbaru</h2>
+      </div>
+      <div class="filter-grid">
+        <input id="searchInput" type="search" placeholder="Cari wilayah, judul, atau isi informasi..." />
+        <select id="categoryFilter">
+          <option value="">Semua kategori</option>
+          <option>Perbaikan</option>
+          <option>Kebocoran</option>
+          <option>Gangguan</option>
+          <option>Pemeliharaan</option>
+          <option>Info Umum</option>
+        </select>
+        <select id="statusFilter">
+          <option value="">Semua status</option>
+          <option>Aktif</option>
+          <option>Dalam Proses</option>
+          <option>Selesai</option>
+          <option>Terjadwal</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="cards" id="announcementList" aria-live="polite"></section>
+    <section class="empty" id="emptyState" hidden>
+      <h3>Belum ada informasi.</h3>
+      <p>Silakan cek kembali beberapa saat lagi atau hubungi layanan PDAM.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong id="footerName">PDAM Tirta Daerah</strong>
+      <p id="footerContact">Layanan pelanggan</p>
+    </div>
+    <p>© <span id="year"></span> Portal Informasi Pelanggan PDAM</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
