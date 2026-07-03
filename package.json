@@ -1,0 +1,17 @@
+{
+  "name": "pdam-pengumuman-web",
+  "version": "1.0.0",
+  "description": "Web berita/pengumuman PDAM untuk pelanggan dan dashboard admin.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["pdam", "pengumuman", "pelanggan", "admin"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0"
+  }
+}
