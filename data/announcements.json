@@ -1,0 +1,30 @@
+[
+  {
+    "id": "demo-1",
+    "title": "Perbaikan Kebocoran Pipa Distribusi",
+    "message": "Saat ini petugas sedang melakukan perbaikan kebocoran pipa distribusi. Aliran air di sekitar wilayah terdampak dapat mengalami penurunan tekanan sementara.",
+    "category": "Perbaikan",
+    "area": "Contoh: Kelurahan Sukamaju dan sekitarnya",
+    "status": "Dalam Proses",
+    "priority": "Penting",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-04",
+    "published": true,
+    "createdAt": "2026-07-04T00:00:00.000Z",
+    "updatedAt": "2026-07-04T00:00:00.000Z"
+  },
+  {
+    "id": "demo-2",
+    "title": "Informasi Pembayaran Tagihan Air",
+    "message": "Pelanggan dapat melakukan pembayaran tagihan melalui loket resmi, mobile banking, dan kanal pembayaran yang bekerja sama dengan PDAM.",
+    "category": "Info Umum",
+    "area": "Semua wilayah layanan",
+    "status": "Aktif",
+    "priority": "Normal",
+    "startDate": "2026-07-04",
+    "endDate": "",
+    "published": true,
+    "createdAt": "2026-07-04T00:00:00.000Z",
+    "updatedAt": "2026-07-04T00:00:00.000Z"
+  }
+]
