@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Admin Pengumuman PDAM</title>
+  <link rel="stylesheet" href="/admin-assets/admin.css" />
+</head>
+<body>
+  <header class="admin-header">
+    <div>
+      <p class="eyebrow">Dashboard Admin</p>
+      <h1>Kelola Pengumuman Pelanggan</h1>
+    </div>
+    <div class="header-actions">
+      <a href="/" target="_blank" rel="noopener">Lihat Halaman Pelanggan</a>
+      <button id="logoutBtn" type="button" class="ghost">Logout</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="panel form-panel">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow dark">Form informasi</p>
+          <h2 id="formTitle">Tambah Pengumuman</h2>
+        </div>
+        <button type="button" id="resetBtn" class="ghost small">Reset</button>
+      </div>
+
+      <form id="announcementForm">
+        <input type="hidden" name="id" />
+        <label>
+          Judul
+          <input name="title" placeholder="Contoh: Perbaikan kebocoran pipa" required maxlength="120" />
+        </label>
+        <label>
+          Isi Pengumuman
+          <textarea name="message" rows="5" placeholder="Tulis informasi yang akan dibaca pelanggan..." required></textarea>
+        </label>
+        <div class="grid-2">
+          <label>
+            Kategori
+            <select name="category" required>
+              <option>Perbaikan</option>
+              <option>Kebocoran</option>
+              <option>Gangguan</option>
+              <option>Pemeliharaan</option>
+              <option>Info Umum</option>
+            </select>
+          </label>
+          <label>
+            Status
+            <select name="status" required>
+              <option>Aktif</option>
+              <option>Dalam Proses</option>
+              <option>Selesai</option>
+              <option>Terjadwal</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          Wilayah Terdampak
+          <input name="area" placeholder="Contoh: Jl. Merdeka, Sukamaju, dan sekitarnya" required />
+        </label>
+        <div class="grid-3">
+          <label>
+            Prioritas
+            <select name="priority" required>
+              <option>Normal</option>
+              <option>Penting</option>
+              <option>Darurat</option>
+            </select>
+          </label>
+          <label>
+            Tanggal Mulai
+            <input name="startDate" type="date" />
+          </label>
+          <label>
+            Tanggal Selesai
+            <input name="endDate" type="date" />
+          </label>
+        </div>
+        <label class="checkbox-row">
+          <input name="published" type="checkbox" checked />
+          Tampilkan di halaman pelanggan
+        </label>
+        <button type="submit" id="saveBtn">Simpan Pengumuman</button>
+        <p class="message" id="formMessage" role="alert"></p>
+      </form>
+    </section>
+
+    <section class="panel list-panel">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow dark">Data pengumuman</p>
+          <h2>Semua Informasi</h2>
+        </div>
+        <button type="button" id="refreshBtn" class="ghost small">Refresh</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Judul</th>
+              <th>Kategori</th>
+              <th>Status</th>
+              <th>Prioritas</th>
+              <th>Tampil</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/admin-assets/admin.js"></script>
+</body>
+</html>
